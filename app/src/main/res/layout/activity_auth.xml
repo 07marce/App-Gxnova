@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1320"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp">
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="140dp"
+                android:src="@drawable/logo_gxnova"
+                android:contentDescription="Logo GXNOVA" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GXNOVA"
+                android:textColor="@color/gx_white"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conectamos talento con oportunidades"
+                android:textColor="@color/gx_text_grey"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_tabs"
+            android:layout_marginBottom="15dp"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tabLogin"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Iniciar Sesión"
+                android:textSize="14sp"
+                android:textColor="@color/gx_black"
+                android:background="@drawable/bg_tab_active" />
+
+            <TextView
+                android:id="@+id/tabRegister"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Registrarse"
+                android:textSize="14sp"
+                android:textColor="@color/gx_black"
+                android:background="@drawable/bg_tab_inactive" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginTop="-12dp">
+
+            <LinearLayout
+                android:id="@+id/layoutLogin"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Bienvenido a GXNOVA"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/gx_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Ingresa tus credenciales para continuar"
+                    android:textColor="@color/gx_text_grey"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Email"
+                    android:textColor="@color/gx_black"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="tu@email.com"
+                    android:paddingHorizontal="12dp"
+                    android:background="@drawable/bg_input"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="16sp"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:text="Contraseña"
+                    android:textColor="@color/gx_black"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp">
+
+                    <EditText
+                        android:id="@+id/inputPasswordLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Contraseña"
+                        android:inputType="textPassword"
+                        android:paddingHorizontal="12dp"
+                        android:paddingEnd="40dp"
+                        android:background="@drawable/bg_input"
+                        android:textSize="16sp"
+                        android:singleLine="true"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/eyes"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Mostrar Contraseña"/>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Iniciar Sesión"
+                    android:textColor="@color/gx_white"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutRegister"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Bienvenido a GXNOVA"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/gx_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="Crea tu cuenta para comenzar"
+                    android:textColor="@color/gx_text_grey"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:hint="Nombres"
+                        android:paddingHorizontal="12dp"
+                        android:background="@drawable/bg_input"
+                        android:layout_marginEnd="8dp"
+                        android:textSize="16sp"
+                        android:singleLine="true"/>
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="50dp"
+                        android:hint="Apellidos"
+                        android:paddingHorizontal="12dp"
+                        android:background="@drawable/bg_input"
+                        android:textSize="16sp"
+                        android:singleLine="true"/>
+                </LinearLayout>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Teléfono"
+                    android:paddingHorizontal="12dp"
+                    android:background="@drawable/bg_input"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="16sp"
+                    android:singleLine="true"/>
+
+                <Spinner
+                    android:id="@+id/spCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_input"
+                    android:layout_marginBottom="16dp"
+                    android:popupTheme="@style/SpinnerPopup"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="tu@email.com"
+                    android:paddingHorizontal="12dp"
+                    android:background="@drawable/bg_input"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="16sp"
+                    android:singleLine="true"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Contraseña"
+                    android:paddingHorizontal="12dp"
+                    android:background="@drawable/bg_input"
+                    android:layout_marginBottom="16dp"
+                    android:textSize="16sp"
+                    android:singleLine="true"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp">
+
+                    <EditText
+                        android:id="@+id/inputPasswordRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Confirma contraseña"
+                        android:inputType="textPassword"
+                        android:paddingHorizontal="12dp"
+                        android:paddingEnd="40dp"
+                        android:background="@drawable/bg_input"
+                        android:textSize="16sp"
+                        android:singleLine="true"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/eyes"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="Mostrar Contraseña"/>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Registrarse"
+                    android:textColor="@color/gx_white"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:background="@drawable/bg_button" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:text="© 2025 GXNOVA - Todos los derechos reservados"
+            android:textColor="@color/gx_text_grey"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+</ScrollView>
