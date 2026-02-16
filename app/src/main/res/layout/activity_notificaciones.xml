@@ -9,7 +9,7 @@
       android:id="@+id/header_container"
       android:layout_width="match_parent"
       android:layout_height="130dp"
-      android:background="#2E5BFF"
+      android:background="#FF6A00"
       android:padding="20dp">
 
     <ImageView
@@ -67,7 +67,7 @@
       android:padding="15dp"
       android:scrollbars="none">
     <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Todas" android:background="#2E5BFF" android:textColor="#FFFFFF" android:paddingHorizontal="16dp" android:paddingVertical="8dp" android:layout_marginEnd="10dp" android:textStyle="bold"/>
+      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Todas" android:background="#FF6A00" android:textColor="#FFFFFF" android:paddingHorizontal="16dp" android:paddingVertical="8dp" android:layout_marginEnd="10dp" android:textStyle="bold"/>
       <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mensajes" android:background="@drawable/fondo_chat_blanco" android:paddingHorizontal="16dp" android:paddingVertical="8dp" android:layout_marginEnd="10dp"/>
       <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pagos" android:background="@drawable/fondo_chat_blanco" android:paddingHorizontal="16dp" android:paddingVertical="8dp" android:layout_marginEnd="10dp"/>
       <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reseñas" android:background="@drawable/fondo_chat_blanco" android:paddingHorizontal="16dp" android:paddingVertical="8dp"/>
@@ -78,13 +78,14 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_below="@id/scroll_filtros"
-      android:layout_above="@+id/barra_inferior">
+      android:layout_above="@+id/bottom_navigation_bar">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="16dp">
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="20dp">
 
       <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/fondo_notif_azul" android:padding="15dp" android:layout_marginBottom="12dp">
         <androidx.cardview.widget.CardView android:id="@+id/img_carlos" android:layout_width="45dp" android:layout_height="45dp" app:cardCornerRadius="22.5dp">
@@ -143,34 +144,34 @@
   <LinearLayout
       android:id="@+id/bottom_navigation_bar"
       android:layout_width="match_parent"
-      android:layout_height="60dp"
-      android:baselineAligned="false"
+      android:layout_height="80dp"
+      android:paddingBottom="20dp"
       android:orientation="horizontal"
-      android:background="@android:color/white"
+      android:background="#FFFFFF"
       android:layout_alignParentBottom="true"
       android:elevation="8dp">
 
-    <LinearLayout android:id="@+id/nav_inicio" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
-      <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/inicio" app:tint="#FF6A00"/>
-      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Inicio" android:textSize="10sp" android:textColor="#FF6A00"/>
+    <LinearLayout android:id="@+id/nav_inicio" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:clickable="true">
+      <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/inicio" app:tint="#AAAAAA"/>
+      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Inicio" android:textSize="10sp" android:textColor="#AAAAAA"/>
     </LinearLayout>
 
-    <LinearLayout android:id="@+id/nav_buscar" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+    <LinearLayout android:id="@+id/nav_buscar" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:clickable="true">
       <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/buscarr" app:tint="#AAAAAA"/>
       <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Buscar" android:textSize="10sp" android:textColor="#AAAAAA"/>
     </LinearLayout>
 
-    <LinearLayout android:id="@+id/nav_publicaciones" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+    <LinearLayout android:id="@+id/nav_publicaciones" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:clickable="true">
       <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/publicaciones" app:tint="#AAAAAA"/>
       <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Publicaciones" android:textSize="10sp" android:textColor="#AAAAAA"/>
     </LinearLayout>
 
-    <LinearLayout android:id="@+id/nav_chat" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+    <LinearLayout android:id="@+id/nav_chat" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:clickable="true">
       <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/chat" app:tint="#AAAAAA"/>
       <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chat" android:textSize="10sp" android:textColor="#AAAAAA"/>
     </LinearLayout>
 
-    <LinearLayout android:id="@+id/nav_perfil" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+    <LinearLayout android:id="@+id/nav_perfil" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:clickable="true">
       <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/perfil" app:tint="#AAAAAA"/>
       <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Perfil" android:textSize="10sp" android:textColor="#AAAAAA"/>
     </LinearLayout>

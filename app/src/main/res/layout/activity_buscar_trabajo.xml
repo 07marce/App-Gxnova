@@ -1,346 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="#F5F5F5"
+    android:fitsSystemWindows="true"
+    tools:context=".Buscar_trabajo">
 
     <LinearLayout
+        android:id="@+id/bottom_navigation_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
-        <!-- Botón Volver -->
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical">
-
+            android:id="@+id/nav_inicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/ic_arrow_back"/>
+                android:src="@drawable/inicio"
+                app:tint="#AAAAAA"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicio"
+                android:textSize="10sp"
+                android:textColor="#AAAAAA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_buscar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/buscarr"
+                app:tint="#FF6A00"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buscar"
+                android:textSize="10sp"
+                android:textColor="#FF6A00"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_publicaciones"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/publicaciones"
+                app:tint="#AAAAAA"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Publicaciones"
+                android:textSize="10sp"
+                android:textColor="#AAAAAA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/chat"
+                app:tint="#AAAAAA"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:textSize="10sp"
+                android:textColor="#AAAAAA"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nav_perfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/perfil"
+                app:tint="#AAAAAA"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:textSize="10sp"
+                android:textColor="#AAAAAA"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/btn_volver_contenedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_back"
+                    app:tint="#FF6A00"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volver"
+                    android:textColor="#FF6A00"
+                    android:layout_marginStart="8dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Volver"
-                android:layout_marginStart="6dp"
-                android:textSize="16sp"/>
-        </LinearLayout>
+                android:text="Buscar Trabajo"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginTop="16dp"/>
 
-        <!-- Título -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Buscar Trabajo"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginTop="12dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explora oportunidades disponibles"
+                android:textColor="#7A7A7A"
+                android:layout_marginBottom="20dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1 proyectos disponibles"
-            android:textColor="#7A7A7A"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="¿Qué buscas hoy?"
+                android:background="@drawable/bd_rounded"
+                android:paddingHorizontal="16dp"
+                android:drawableStart="@drawable/buscarr"
+                android:drawablePadding="10dp"
+                android:textSize="14sp"/>
 
-        <!-- Barra de búsqueda -->
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="16dp"
-            android:hint="Buscar por título, habilidades..."
-            android:background="@drawable/bg_edittext"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"/>
-        <Spinner
-            android:textColor="@color/spinner_text"
-            android:entries="@array/categorias"
-            android:id="@+id/spCategoria"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/bg_edittext"/>
+            <Spinner
+                android:id="@+id/spCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bd_rounded"/>
 
-        <!-- Tarjeta de trabajo -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <!-- Etiquetas -->
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Desarrollo Móvil"
-                        android:textSize="12sp"
-                        android:background="@drawable/tag_gray"
-                        android:padding="6dp"
-                        android:layout_marginEnd="4dp"/>
-
+                        android:text="DESARROLLO MÓVIL"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF6A00"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Alta"
+                        android:text="App E-commerce"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#222222"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TechStore • Bogotá • Hace 2h"
+                        android:textColor="#7A7A7A"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="$8.000.000 - $12.000.000"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:textSize="16sp"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Enviar Propuesta"
+                        android:backgroundTint="#FF6A00"
                         android:textColor="#FFFFFF"
-                        android:textSize="12sp"
-                        android:background="@drawable/tag_yellow"
-                        android:padding="6dp"
-                        android:layout_marginEnd="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Remoto"
-                        android:textSize="12sp"
-                        android:background="@drawable/tag_gray"
-                        android:padding="6dp"/>
+                        android:layout_marginTop="16dp"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"/>
                 </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                <!-- Título -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Desarrollo de Aplicación Móvil E-commerce"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"/>
-
-                <!-- Info -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TechStore Colombia • Bogotá, Colombia • Hace 2 horas"
-                    android:textColor="#7A7A7A"
-                    android:layout_marginTop="4dp"/>
-
-                <!-- Descripción -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Necesitamos desarrollar una aplicación móvil de e-commerce con pasarela de pagos integrada."
-                    android:textColor="#555555"
-                    android:layout_marginTop="8dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"
-                    android:text="Habilidades Requeridas"/>
-
-                <!-- Habilidades -->
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="React Native"
-                        android:background="@drawable/tag_gray"
-                        android:padding="5dp"
-                        android:layout_marginEnd="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Node.js"
-                        android:background="@drawable/tag_gray"
-                        android:padding="5dp"
-                        android:layout_marginEnd="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Firebase"
-                        android:background="@drawable/tag_gray"
-                        android:padding="5dp"
-                        android:layout_marginEnd="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pasarelas de pago"
-                        android:background="@drawable/tag_gray"
-                        android:padding="5dp"/>
-                </LinearLayout>
-
-                <!-- Salario -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="$8.000.000 - $12.000.000"
-                    android:textStyle="bold"
-                    android:textColor="#2E7D32"/>
-
-                <!-- Botón -->
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:text="Enviar Propuesta"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#000000"
-                    android:layout_marginTop="12dp"/>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <!-- Etiquetas -->
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Desarrollo Web"
-                        android:textSize="12sp"
-                        android:background="@drawable/tag_yellow"
-                        android:padding="6dp"
-                        android:layout_marginEnd="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Alta"
-
-                        android:textSize="12sp"
-                        android:background="@drawable/tag_gray"
-                        android:padding="6dp"
-                        android:layout_marginEnd="4dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Remoto"
-                        android:textSize="12sp"
-                        android:background="@drawable/tag_gray"
-                        android:padding="6dp"/>
-                </LinearLayout>
-
-                <!-- Título -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Desarrollo de Sistema De Gestion Para Hotel"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"/>
-
-                <!-- Info -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hotel Coloinal • Popayán, Colombia • Hace 1 minuto"
-                    android:textColor="#7A7A7A"
-                    android:layout_marginTop="4dp"/>
-
-                <!-- Descripción -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Necesitamos desarrollar un sistema de gestion hotelera con módulos de reservas, check-in/check.out y facturacion."
-                    android:textColor="#555555"
-                    android:layout_marginTop="8dp"/>
-                <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"
-                    android:text="Habilidades Requeridas"/>
-
-                <!-- Habilidades -->
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
-
+                    android:orientation="vertical"
+                    android:padding="20dp">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Php"
-                        android:background="@drawable/tag_gray"
-                        android:padding="5dp"
-                        android:layout_marginEnd="4dp"/>
-
+                        android:text="DISEÑO UI/UX"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF6A00"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MySQL"
-                        android:background="@drawable/tag_gray"
-                        android:padding="5dp"
-                        android:layout_marginEnd="4dp"/>
-
+                        android:text="Rediseño Plataforma Web"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#222222"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="JavaScript"
-                        android:background="@drawable/tag_gray"
-                        android:padding="5dp"
-                        android:layout_marginEnd="4dp"/>
-
+                        android:text="Nova Soft • Remoto • Hace 5h"
+                        android:textColor="#7A7A7A"
+                        android:textSize="13sp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Css/Html"
-                        android:background="@drawable/tag_gray"
-                        android:padding="5dp"/>
+                        android:layout_marginTop="12dp"
+                        android:text="$5.000.000 - $7.500.000"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:textSize="16sp"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Enviar Propuesta"
+                        android:backgroundTint="#FF6A00"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginTop="16dp"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"/>
                 </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                <!-- Salario -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="$4.000.000 - $10.000.000"
-                    android:textStyle="bold"
-                    android:textColor="#2E7D32"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"/>
 
-                <!-- Botón -->
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:text="Enviar Propuesta"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#000000"
-                    android:layout_marginTop="12dp"/>
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

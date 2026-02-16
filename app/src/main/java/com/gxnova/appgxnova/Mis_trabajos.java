@@ -2,48 +2,42 @@ package com.gxnova.appgxnova;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
 
 public class Mis_trabajos extends AppCompatActivity {
 
-    // 1. Declaramos los botones
-    private MaterialButton btnPublicarTrabajo; // El azul de arriba
-    private MaterialButton btnPublicarCentro;  // El azul que tiene el "+"
-    private ImageButton btnBack;               // La flecha para volver
+    private MaterialButton btnPublicarTrabajo, btnPublicarCentro, btnPublicarUrgente;
+    private ImageButton btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mis_trabajos);
 
-        // 2. Los vinculamos con el XML
+        // 1. Botones de acción
         btnBack = findViewById(R.id.btnBack);
         btnPublicarTrabajo = findViewById(R.id.btnPublicarTrabajo);
         btnPublicarCentro = findViewById(R.id.btnPublicarCentro);
+        btnPublicarUrgente = findViewById(R.id.btnPublicarUrgente);
 
-        // 3. Programamos la flecha para que se cierre esta pantalla y vuelvas a Inicio
         btnBack.setOnClickListener(v -> finish());
 
-        // 4. Programamos el botón azul para que abra el formulario
-        btnPublicarTrabajo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // AQUÍ: Mis_trabajos es donde estás, Publicar_trabajo es a donde vas
-                Intent intent = new Intent(Mis_trabajos.this, Publicar_trabajo.class);
-                startActivity(intent);
-            }
-        });
+        // Ir a publicar (Formulario)
+        btnPublicarTrabajo.setOnClickListener(v -> startActivity(new Intent(this, Publicar_trabajo.class)));
+        btnPublicarCentro.setOnClickListener(v -> startActivity(new Intent(this, Publicar_trabajo.class)));
+        btnPublicarUrgente.setOnClickListener(v -> startActivity(new Intent(this, Publicar_trabajo.class)));
 
-        // Hacemos lo mismo para el botón azul del centro por si no hay trabajos
-        btnPublicarCentro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Mis_trabajos.this, Publicar_trabajo.class);
-                startActivity(intent);
-            }
-        });
+        // 2. LA BARRA INFERIOR (Para que no se cierre la app)
+        configurarBarra();
+    }
+
+    private void configurarBarra() {
+        findViewById(R.id.nav_inicio).setOnClickListener(v -> startActivity(new Intent(this, Inicio.class)));
+        findViewById(R.id.nav_buscar).setOnClickListener(v -> startActivity(new Intent(this, Buscar_trabajo.class)));
+        findViewById(R.id.nav_chat).setOnClickListener(v -> startActivity(new Intent(this, Chat.class)));
+        findViewById(R.id.nav_perfil).setOnClickListener(v -> startActivity(new Intent(this, Perfil.class)));
     }
 }

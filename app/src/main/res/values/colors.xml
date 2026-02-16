@@ -60,4 +60,14 @@
 
 
     <color name="spinner_hint">#9E9E9E</color>
+
+    <!-- nuevoooooo -->
+
+    <color name="naranja_principal">#FF6B00</color>
+    <color name="verde_trabajar">#00C853</color>
+    <color name="rojo_urgente">#D50000</color>
+    <color name="gris_fondo">#F5F5F5</color>
+    <color name="gris_suave">#BDBDBD</color>
+    <color name="azul_oscuro_login">#0D1117</color>
+
 </resources>

@@ -39,11 +39,27 @@
                 android:weightSum="3">
 
                 <LinearLayout
-                    android:layout_width="0dp" android:layout_height="80dp" android:layout_weight="1" android:layout_margin="5dp"
-                    android:background="@drawable/fondo_tarjeta_stats" android:backgroundTint="#33FFFFFF"
-                    android:gravity="center" android:orientation="vertical">
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold"/>
-                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trabajos" android:textColor="#FFFFFF" android:textSize="11sp"/>
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/fondo_tarjeta_stats"
+                    android:backgroundTint="#33FFFFFF"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trabajos"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -82,11 +98,27 @@
             android:elevation="2dp"
             android:padding="4dp">
             <TextView
-                android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
-                android:text="Activo" android:background="@drawable/anillo_azul"
-                android:textColor="#FFFFFF" android:gravity="center" android:textStyle="bold" />
-            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="Completado" android:gravity="center" android:textColor="#8E8E93" />
-            <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="Cancelado" android:gravity="center" android:textColor="#8E8E93" />
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Activo"
+                android:background="@drawable/anillo_azul"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Completado"
+                android:gravity="center"
+                android:textColor="#8E8E93" />
+            <TextView android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Cancelado"
+                android:gravity="center"
+                android:textColor="#8E8E93" />
         </LinearLayout>
 
         <LinearLayout
